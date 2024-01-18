@@ -1,37 +1,34 @@
-<h1>Splunk Home Lab | Searches, Commands, Reports, & Dashboards</h1>
+<h1>Splunk Cloud in VirtualBox - Mastering Searches, Commands, Reports, and Dashboards</h1>
 
 <h2>Description</h2>
-This is a walkthrough of how I created A Virtual Machine environment using Oracle VM Virtualbox running Microsft Windows 11 and Microsoft Server 2022. I did this project to gain experience with Active Directory and PowerShell to deepen my uderstanding on how organizations utilize these tools to create and manage user accounts and control access to resources on corporate networks. This project will showcase the steps I took to create a corporate domain with Windows Server 2022 utilizing Oracle VM Virtualbox to configure an internal netowrk with DHCP, create over 1,000 users with credentials with PowerShell, and manage user groups and security policies. It will also diplay the steps taken to create a Client using Windows 11, add the Client to the domain, and login to the Client using created credentials to test the functionality of the domain. 
+The core focus for this project is to gain practical experience with Splunk Cloud by setting up a virtual environment in Oracle VM VirtualBox and exploring core functionalities in detail like searches, commands, reports, and dashboards. For this home lab I will use the Search App to add data to my Splunk deployment, search the data with various commands, save the searches as reports, and create dashboards. The searches included in the lab will derive from uploaded indexted data from log files. Commands will be used to create specilaized searches which will provide data that'll be used for the creaation of detailed reports and charts. Lastly, the Dashboard Editor will be used to create a new dashboard which I will add the saved reports, charts, and new search to. 
 <br/>
 
 
 <h2>Key Learnings</h2>
 
-- Hands-on experience with Active Directory concepts and administration.
+- Hands-on experience with Splunk Cloud search app function and create visualizations from log files to extract insights from data.
+- Reporting and dashboard creation used for visual data analysis and communicating to key stakeholders.
+- Navigation, familiarity, and use cases of the Splunk platform.
 - Understanding of virtual machine setup and networking in VirtualBox.
-- Enhanced PowerShell skills for managing Active Directory objects.
-- Troubleshooting and problem-solving in a lab environment.
 <br/>
 
 
 <h2>Utilities Used</h2>
 
-- <b>Active Directory</b>
-- <b>PowerShell</b>
-- <b>CMD</b>
+- <b>Splunk Cloud</b>
+- <b>Log Files</b>
 
 
 <h2>Environments Used </h2>
 
 - <b>Oracle VM Virtualbox</b> 
 - <b>Windows 11</b>
-- <b>Windows Server 2022</b>
 
 <h2>Links</h2>
 
+- <b>Splunk Cloud:</b> https://www.splunk.com/en_us/download/splunk-cloud.html
 - <b>Oracle VM Virtualbox:</b> https://www.virtualbox.org/
-- <b>Windows Server 2022:</b> https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022
-- <b>Windows 11 ISO:</b> https://www.microsoft.com/software-download/windows11
 
 
 <h2>Program walk-through:</h2>
