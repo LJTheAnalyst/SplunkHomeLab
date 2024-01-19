@@ -39,8 +39,7 @@ The core focus for this project is to gain practical experience with Splunk Clou
 <br/>
 
 Oracle VM VirtualBox is the Virtual Machine (VM) that I will download, configure, and manage this lab. I also downloaded the VirtualBox Extension Pack to support the VM. <br/>
-<img src="https://imgur.com/OeSOJfK.png" height="80%" width="80%" alt="Nessus Essentials"/> 
-<br />
+<br><img src="https://imgur.com/OeSOJfK.png" height="80%" width="80%" alt="Nessus Essentials"/> <br/>
 <br />
 The first step of this lab is uploading the data that I will be querying and analyzing. I was able to access the the 'add data' feature from my Splunk cloud home page. The files that will be uploading includes access.log files, secure.log files, and vendor_sales.log files from mail servers and web accounts. Once the files were uploaded, I performed a basic search to ensure a successful upload.  <br/>
 <br><img src="https://imgur.com/9FyAwXS.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
@@ -63,8 +62,9 @@ For part 2 I will be exploring the Search App by searching for keywords and also
 <br>To run a search with specified relative time ranges I ran a search over the last two days, created the following search query. <br/>
 <br><img src="https://imgur.com/Zbmfp9b.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br>To run a search with specified date and time ranges, I created a custom time time range. For example, to troubleshoot an issue that took place January 6, 2023 about 9:30 AM, I specified the earliest time of 01/06/2024 7:30:00 and the latest time of 01/06/2024 10:30:00 to show the events immediately before and after the issue took place.<br/>
-<br><img src="https://imgur.com/ieESetm.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<br />
+<br><img src="https://imgur.com/ieESetm.png" height="80%" width="80%" alt="Nessus Essentials"/> <br/>
+<br/>
+
 
 <h3><b>Part 3: Searching the Data</b></h3>
 <br />
@@ -132,7 +132,6 @@ Below I used the search and chart feature to compare the counts of user actions 
 <br><img src="https://imgur.com/DVnS8ch.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br><img src="https://imgur.com/hGakijo.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br/>
-<br/>
 
 
 <h3><b>Part 6: Creating Dashboards</b></h3>
@@ -144,7 +143,6 @@ To Start the creation of the dashboard, I ran a search for the count of purchase
 <br><img src="https://imgur.com/K97hIpH.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br>Next, I will add controls to the dashboard. Examples of a control include text, a checkbox, or a time range picker. For this example, I am using the time range picker with a three-week date range. With the addition of this control, the inline search that powers the panel now uses the time range that is specified in the shared time picker.<br/>
 <br><img src="https://imgur.com/vuFZ85K.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
-<br><img src="https://imgur.com/71K3NRo.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br>To include more data inside of the dashboard, I will add additional panels which will consist of the previously saved reports and ad hoc searches.<br/>
 <br>This first two panels I will add is from the Purchasing trends and Comparison of Actions and Conversion Rates by Product reports that I previously created.<br/>
 <br><img src="https://imgur.com/We4Xc1s.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
