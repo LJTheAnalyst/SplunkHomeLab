@@ -94,21 +94,26 @@ For step 3 I will be creating searches that retrieve events from the index. The 
 <h3><b>Part 4: Enabling Field Lookups</b></h3>
 <br/>
 
-To allow the soon to be created Client to have access to be on the private virtual network and still be able to access the internet through the domain controller I installed the Remote Access Server (RAS) and Network Address Translation (NAT) through the Server Manager. The steps were as followed: Select Remote Access, add routing, selected Network Address Translation (NAT), and selected to use the previously configured IP addresses. <br/>
-<img src="https://imgur.com/VF5Pk2R.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/laLmN9a.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/kmzXbSH.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/NcYvzoM.png" height="80%" width="80%" alt="Nessus Essentials"/>
+By enabling the field lookups, I will be able to display the actual product names inside of my searches, dashboards, and reports instead of product codes and product IDs. The first step in the enabling filed lookup process is uploading the file that includes the name of the products that I will like to include in my searches. <br/>
+<br><img src="https://imgur.com/qPILMpD.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/mn1mkIc.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/7s1GoNQ.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>When I uploaded the lookup table file, it was uploaded with a default sharing setting as private, so I must change the permissions to the file. For this lab, I am going to share the lookup table file with all applications.<br/>
+<br><img src="https://imgur.com/uxfZgUB.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Add the field lookup definition: After the importation of the lookup table files, I must define the information in the lookup table file and how that information relates to the fields in my events, this is called a lookup definition.<br/>
+<br><img src="https://imgur.com/dUFiErJ.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/n3TRJcW.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Next, I will make the lookup automatic, so instead of using the lookup command in my search when I want to apply a field lookup to your events, the lookup will run automatically.<br/>
+<br><img src="https://imgur.com/RxPyRuo.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/6SYtLNn.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Next, I will search with the field lookups that were created. As a result of the search, I can see that the both the field lookups that I created were successfully created.<br/>
+<br><img src="https://imgur.com/MHMm4Km.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br />
-<br />
-The next step is to Setup DHCP Server on the domain controller which will allow computers/ client computers on the network to automatically get their IP Address on the internal network. The steps were as followed: select DHCP Server, set a new scope which included an IP range of 172.16.0.100 – 172.16.0.200, a length of 24, and a subnet mask of 255.255.255.0. A Lease Duration was set to 8 days. The new scope was then successfully created. <br/>
-<img src="https://imgur.com/etcPtVl.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/FBFBJw4.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/AU1zc9H.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/VpMgj1X.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/ZW8DpVZ.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<br />
-<br />
+
+
+<h3><b>Part 5: Enabling Field Lookups</b></h3>
+<br/>
+
 A PowerShell Script was used to create 1,052 users to add to Active Directory. A PowerShell script was created to set the password for all 1,052 users to ‘Password1’ and retrieve the list of users from a .txt file that was created. Furthermore, a loop script was used to format the first name, last name, and username for each user. To bypass the security feature in PowerShell I had to unrestrict the security policy. The script was then run to add the users to Active Directory. <br/>
 <img src="https://imgur.com/PuoRSJC.png" height="80%" width="80%" alt="Nessus Essentials"/>
 <img src="https://imgur.com/Pt4vuBy.png" height="80%" width="80%" alt="Nessus Essentials"/>
