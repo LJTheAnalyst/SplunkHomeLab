@@ -64,22 +64,37 @@ For part 2 I will be exploring the Search App by searching for keywords and also
 <br><img src="https://imgur.com/Zbmfp9b.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br>To run a search with specified date and time ranges, I created a custom time time range. For example, to troubleshoot an issue that took place January 6, 2023 about 9:30 AM, I specified the earliest time of 01/06/2024 7:30:00 and the latest time of 01/06/2024 10:30:00 to show the events immediately before and after the issue took place.<br/>
 <br><img src="https://imgur.com/ieESetm.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
-<br />
-<br />
+<br/>
 
-
+<br>
 <h3><b>Part 3: Searching the Data</b></h3>
+<br/>
+
+<br>For step 3 I will be creating searches that retrieve events from the index. The data for this lab is for the Buttercup Games online store. The store sells games and other related items, such as t-shirts. In this lab, I will primarily search the Apache web access logs, and correlate the access logs with the vendor sales logs. <br/>
+<br>Using the Search Assistant feature, I typed in ‘category’, and selected “categoryid=sports” from the list. <br/>
+<br><img src="https://imgur.com/npkGRtI.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/sseoQ8m.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>I then wanted to find out how many errors have occurred on the Buttercup Games website. To retrieve events that mention errors or failures I performed a search using a Boolean operator. Below is a search to retrieve events that contain keywords of buttercupgames and error with a time frame of all time. The Boolean operator, AND was used for this search. <br/>
+<br><img src="https://imgur.com/lSjnvnZ.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Below is a search to retrieve events that contain keywords of error, fail, failure, or severe in the events that also mention buttercupgames. The Boolean operator, OR and the wildcard feature was used for this search. <br/>
+<br><img src="https://imgur.com/jv2DpVU.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Below is an example of a search being performed using fields. Fields are searchable name and value pairings that distinguish one event from another. <br/>
+<br><img src="https://imgur.com/uVwhVjN.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Below is an example of two targeted searches being performed. One is a search for successful purchases from the Buttercup Games store and the other is a search for failed searches. <br/>
+<br><img src="https://imgur.com/wURiMjJ.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/0GDpUai.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Below is an example of a search being performed for errors with a date range of all time. <br/>
+<br><img src="https://imgur.com/3JTdP0T.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Below is an example of a search being performed for a successful purchase of the simulation product for a date range of 1/8/2024 - 1/10/2024.<br/>
+<br><img src="https://imgur.com/ufoJTFm.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>I will use the subsearch feature to narrow down the set of events that I search on. The below search is to find the most frequent shopper and the products (productId) that the shopper purchased.  <br/>
+<br><img src="https://imgur.com/UvOr8M6.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br />
 
-Next I created a dedicated domain admin account. This was done by creating an Organizational Unit (OU), which I named ‘Admin’, then creating a user to add to the Admin OU. For the purpose of this lab, the password policy was set to Password never expires. Once the user was successfully created, it was then added to the Domain Admins group. Finally, to ensure that the user was successfully created I logged into windows using credentials of the newly created user. <br/>
-<img src="https://imgur.com/AQGZJn4.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/I4vWPQB.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/0P3qeaA.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/rg1M70h.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/37uVYKg.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/1Svj0cg.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<br />
-<br />
+
+<h3><b>Part 4: Enabling Field Lookups</b></h3>
+<br/>
+
 To allow the soon to be created Client to have access to be on the private virtual network and still be able to access the internet through the domain controller I installed the Remote Access Server (RAS) and Network Address Translation (NAT) through the Server Manager. The steps were as followed: Select Remote Access, add routing, selected Network Address Translation (NAT), and selected to use the previously configured IP addresses. <br/>
 <img src="https://imgur.com/VF5Pk2R.png" height="80%" width="80%" alt="Nessus Essentials"/>
 <img src="https://imgur.com/laLmN9a.png" height="80%" width="80%" alt="Nessus Essentials"/>
