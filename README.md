@@ -63,14 +63,13 @@ For part 2 I will be exploring the Search App by searching for keywords and also
 <br>To run a search with specified relative time ranges I ran a search over the last two days, created the following search query. <br/>
 <br><img src="https://imgur.com/Zbmfp9b.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br>To run a search with specified date and time ranges, I created a custom time time range. For example, to troubleshoot an issue that took place January 6, 2023 about 9:30 AM, I specified the earliest time of 01/06/2024 7:30:00 and the latest time of 01/06/2024 10:30:00 to show the events immediately before and after the issue took place.<br/>
-<br><img src="https://imgur.com/ieESetm.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
-<br/>
+<br><img src="https://imgur.com/ieESetm.png" height="80%" width="80%" alt="Nessus Essentials"/>
+<br />
 
-<br>
 <h3><b>Part 3: Searching the Data</b></h3>
-<br/>
+<br />
 
-<br>For step 3 I will be creating searches that retrieve events from the index. The data for this lab is for the Buttercup Games online store. The store sells games and other related items, such as t-shirts. In this lab, I will primarily search the Apache web access logs, and correlate the access logs with the vendor sales logs. <br/>
+For step 3 I will be creating searches that retrieve events from the index. The data for this lab is for the Buttercup Games online store. The store sells games and other related items, such as t-shirts. In this lab, I will primarily search the Apache web access logs, and correlate the access logs with the vendor sales logs. <br/>
 <br>Using the Search Assistant feature, I typed in ‘category’, and selected “categoryid=sports” from the list. <br/>
 <br><img src="https://imgur.com/npkGRtI.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br><img src="https://imgur.com/sseoQ8m.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
