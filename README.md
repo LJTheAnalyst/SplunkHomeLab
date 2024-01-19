@@ -34,27 +34,43 @@ The core focus for this project is to gain practical experience with Splunk Clou
 <h2>Program walk-through:</h2>
 
 <p align="center">
+
+<h3><b>Part 1: VirtualBox Configuration and Data Upload</b></h3>
+<br/>
+
 Oracle VM VirtualBox is the Virtual Machine (VM) that I will download, configure, and manage this lab. I also downloaded the VirtualBox Extension Pack to support the VM. <br/>
 <img src="https://imgur.com/OeSOJfK.png" height="80%" width="80%" alt="Nessus Essentials"/> 
 <br />
 <br />
-Downloaded Windows Server 2022 ISO and installed it to the VM. The reason for the server is to handle the organizational IT administrative related activities including user and device management, enterprise software file and storage management, etc.  <br/>
-<img src="https://imgur.com/y7NeEIw.png" height="80%" width="80%" alt="Nessus Essentials"/>
+The first step of this lab is uploading the data that I will be querying and analyzing. I was able to access the the 'add data' feature from my Splunk cloud home page. The files that will be uploading includes access.log files, secure.log files, and vendor_sales.log files from mail servers and web accounts. Once the files were uploaded, I performed a basic search to ensure a successful upload.  <br/>
+<br><img src="https://imgur.com/9FyAwXS.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/GUUa05K.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/ZgUNOdq.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/csXbN2D.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/KLZgxHm.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/G7EM1dv.png" height="80%" width="80%" alt="Nessus Essentials"/>
 <br />
 <br />
-As a requirement for the virtual machine, I must install an Operating System. I chose to install Windows 11. <br/>
-<img src="https://imgur.com/mQbQbGG.png" height="80%" width="80%" alt="Nessus Essentials"/>
+
+
+<h3><b>Part 2: Exploring the Search App</b></h3>
 <br />
-<br /> 
-Once the VM is created and Windows 2022 is installed, the next step is to configure the IP settings. For this an internal NIC was created separate from the public facing internet (my home router). The IP for the internal NIC was set as 172.16.0.1, subnet mask of 255.255.255.0, and a DNS as 127.0.0.1.  <br/>
-<img src="https://imgur.com/r4Wt8FY.png" height="80%" width="80%" alt="Nessus Essentials"/>
+
+For part 2 I will be exploring the Search App by searching for keywords and also optimizing my search criteria by using specified time periods. <br/>
+<br><img src="https://imgur.com/C4rGZw9.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>To increase the number of returned events, I adjusted the time frame from Last 24 hours to Yesterday. As displayed below, the amount of events increased from 2,897 to 4,107.<br/>
+<br><img src="https://imgur.com/kfGnF3Z.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>To run a search with specified relative time ranges I ran a search over the last two days, created the following search query. <br/>
+<br><img src="https://imgur.com/Zbmfp9b.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>To run a search with specified date and time ranges, I created a custom time time range. For example, to troubleshoot an issue that took place January 6, 2023 about 9:30 AM, I specified the earliest time of 01/06/2024 7:30:00 and the latest time of 01/06/2024 10:30:00 to show the events immediately before and after the issue took place.<br/>
+<br><img src="https://imgur.com/ieESetm.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br />
 <br />
-Now that the network is configured, I then installed Active Directory Domain Services (AD DS) and created a domain. Using the Server Manager, I selected the server in which I was going to install AD. The Fully Qualified Domain Name (FQDN) was set to ‘mydomain.com'.  <br/>
-<img src="https://imgur.com/BOOwk3y.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/ELJmJHc.png" height="80%" width="80%" alt="Nessus Essentials"/>
+
+
+<h3><b>Part 3: Searching the Data</b></h3>
 <br />
-<br />
+
 Next I created a dedicated domain admin account. This was done by creating an Organizational Unit (OU), which I named ‘Admin’, then creating a user to add to the Admin OU. For the purpose of this lab, the password policy was set to Password never expires. Once the user was successfully created, it was then added to the Domain Admins group. Finally, to ensure that the user was successfully created I logged into windows using credentials of the newly created user. <br/>
 <img src="https://imgur.com/AQGZJn4.png" height="80%" width="80%" alt="Nessus Essentials"/>
 <img src="https://imgur.com/I4vWPQB.png" height="80%" width="80%" alt="Nessus Essentials"/>
