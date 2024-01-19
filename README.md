@@ -144,7 +144,7 @@ To Start the creation of the dashboard, I ran a search for the count of purchase
 <br>Next, I will add controls to the dashboard. Examples of a control include text, a checkbox, or a time range picker. For this example, I am using the time range picker with a three-week date range. With the addition of this control, the inline search that powers the panel now uses the time range that is specified in the shared time picker.<br/>
 <br><img src="https://imgur.com/vuFZ85K.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br>To include more data inside of the dashboard, I will add additional panels which will consist of the previously saved reports and ad hoc searches.<br/>
-<br>This first two panels I will add is from the Purchasing trends and Comparison of Actions and Conversion Rates by Product reports that I previously created.<br/>
+<br>This first two panels I will add are from the Purchasing trends and Comparison of Actions and Conversion Rates by Product reports that I previously created.<br/>
 <br><img src="https://imgur.com/We4Xc1s.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br><img src="https://imgur.com/S0wgBpr.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br><img src="https://imgur.com/QGtBdZu.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
