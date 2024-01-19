@@ -111,44 +111,48 @@ By enabling the field lookups, I will be able to display the actual product name
 <br />
 
 
-<h3><b>Part 5: Enabling Field Lookups</b></h3>
+<h3><b>Part 5: Creating Reports and Charts</b></h3>
 <br/>
 
-A PowerShell Script was used to create 1,052 users to add to Active Directory. A PowerShell script was created to set the password for all 1,052 users to ‘Password1’ and retrieve the list of users from a .txt file that was created. Furthermore, a loop script was used to format the first name, last name, and username for each user. To bypass the security feature in PowerShell I had to unrestrict the security policy. The script was then run to add the users to Active Directory. <br/>
-<img src="https://imgur.com/PuoRSJC.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/Pt4vuBy.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/Ky3j4Bo.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<br />
-<br />
-To verify that all users were added to Active Directory, I opened the created ‘_USERS’ Organizational Unit. All users were successfully added. <br/>
-<img src="https://imgur.com/Z5HDcJT.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<br />
-<br />
-A separate VM was created and configured for the Client in which Windows 11 Pro was installed. This VM will be used to connect to the domain. During the installation of Windows 11, there was an error in need of troubleshooting. To troubleshoot this error, I opened the Registry Editor from the command line window, created a new key and named it ‘LabConfig’ for the local machine then create four new DWORD (32-bit) Values; Bypass BypassTPMCheck, BypassCPUCheck, BypassRAMCheck, and BypassSecureBootCheck. The troubleshoot was successful, and I was then able to finish installing Windows 11 to the VM.  <br/>
-<img src="https://imgur.com/XvcbwJc.png" height="80%" width="80%" alt="Nessus Essentials"/> 
-<img src="https://imgur.com/opAuQ9m.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/T19k2lR.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/71K3NRo.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/mh8Vzvp.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/dUB6nN4.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/5ZNxwzS.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<br />
-<br />
-Next, I verified that the IP configuration is correct and I’m able to ping something on the internet to verify that DNS Server is working. I was able to successfully ping both, www.google.com and also the domain I created. <br/>
-<img src="https://imgur.com/2XlTiEX.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/z9yekyf.png" height="80%" width="80%" alt="Nessus Essentials"/> 
-<img src="https://imgur.com/v4s2lXG.png" height="80%" width="80%" alt="Nessus Essentials"/>
+Below I used the search and chart feature to compare the counts of user actions by calculating information about the actions customers have taken on the online store website. This search uses the chart command to count the number of events that are action=purchase and action=addtocart. The search then uses the rename command to rename the fields that appear in the results. The results will show the number of times each product is viewed, the number of times each product is added to the cart and the number of times each product is purchased.<br/>
+<br><img src="https://imgur.com/h2DrUhM.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Below is a visualization of the requested data formatted in a column chart.<br/>
+<br><img src="https://imgur.com/2ivkF1d.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>I will create a chart that overlays two data series as lines over three data series as columns displayed in an overlay chart. The overlay chart will show Actions such as Adds To Cart and Purchases on one type of chart and the Conversion Rates, such as Views To Purchases, in another type of chart.<br/>
+<br>Below is the initial output of the searched data. The x-axis and y-axis was edited to show a better view of the label that describes the data.<br/>
+<br><img src="https://imgur.com/XF9IwyS.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Next, I will format the second y-axis for the second set of data which is the conversion rates which are viewsToPurchases and cartToPurchase. This will allow the conversion rates now to appear as lines in the chart.<br/>
+<br><img src="https://imgur.com/ypwBDNa.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>I then saved the revised chart as a report.<br/>
+<br><img src="https://imgur.com/49e8Ggd.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Next, I will create a report from a custom chart. In the below example I will create a report that charts which products were purchased over a period of time. <br/>
+<br><img src="https://imgur.com/gfMCCtq.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/SwOpjFe.png" height="80%" width="80%" alt="Nessus Essentials"/><br/><br/>
+<br>Last, I will create a report from a sparkline chart. This report will show the trends in the number of purchases made over time. The search specifies the purchases made for each product by using categoryId. The search results were then saved as a report. <br/>
+<br><img src="https://imgur.com/DVnS8ch.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/hGakijo.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br/>
 <br/>
-Next, I changed the default hostname from DESKTOP-LTUV7 to Client1 and added Client1 to the domain (mydomain.com). <br/>
-<img src="https://imgur.com/2i1sl46.png" height="80%" width="80%" alt="Nessus Essentials"/> 
-<img src="https://imgur.com/qtXqGVO.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<br />
-<br />
-I then logged back into the Server Manager and verified that the client computer (Client1) that I created was added to the domain and I’m able to login to the client computer with a created account. Using the Windows 11 VM (Client 1), I then attempted to login with the created user ‘astuart’ using the created credentials. The login attempt was successful. <br />
-<img src="https://imgur.com/CNt6ht1.png" height="80%" width="80%" alt="Nessus Essentials"/>
-<img src="https://imgur.com/iFsRsgl.png" height="80%" width="80%" alt="Nessus Essentials"/> 
-<img src="https://imgur.com/ZopQzGu.png" height="80%" width="80%" alt="Nessus Essentials"/>
+
+
+<h3><b>Part 6: Creating Dashboards</b></h3>
+<br/>
+
+To Start the creation of the dashboard, I ran a search for the count of purchases for each product and the percent of each product of the total purchases, then changed the visualization from a bar chart to a pie chart and saved it as a Dashboard Panel. <br/>
+<br><img src="https://imgur.com/8rknKop.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/rOaAGwh.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/K97hIpH.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Next, I will add controls to the dashboard. Examples of a control include text, a checkbox, or a time range picker. For this example, I am using the time range picker with a three-week date range. With the addition of this control, the inline search that powers the panel now uses the time range that is specified in the shared time picker.<br/>
+<br><img src="https://imgur.com/vuFZ85K.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/71K3NRo.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>To include more data inside of the dashboard, I will add additional panels which will consist of the previously saved reports and ad hoc searches.<br/>
+<br>This first two panels I will add is from the Purchasing trends and Comparison of Actions and Conversion Rates by Product reports that I previously created.<br/>
+<br><img src="https://imgur.com/We4Xc1s.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/S0wgBpr.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/QGtBdZu.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br>Next, I will add a search to the existing dashboard. This search will utilize the productName field from the Enabling Field Lookups section that I previously created. Lastly, I will connect the Top Purchases by Category and VIP Client Purchases panels to the shared Time Range Picker that was configured above. The VIP Client Purchases panel is now connected to the Time range picker input on the dashboard, so when I change the time range on the dashboard, the panels that are connected to the shared Time Range Picker are all updated.<br/>
+<br><img src="https://imgur.com/h9OPRYZ.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
+<br><img src="https://imgur.com/upgfmbg.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br />
 <br />
 </p>
