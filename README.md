@@ -148,7 +148,7 @@ To Start the creation of the dashboard, I ran a search for the count of purchase
 <br><img src="https://imgur.com/We4Xc1s.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br><img src="https://imgur.com/S0wgBpr.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br><img src="https://imgur.com/QGtBdZu.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
-<br>Next, I will add a search to the existing dashboard. This search will utilize the productName field from the Enabling Field Lookups section that I previously created. Lastly, I will connect the Top Purchases by Category and VIP Client Purchases panels to the shared Time Range Picker that was configured above. The VIP Client Purchases panel is now connected to the Time range picker input on the dashboard, so when I change the time range on the dashboard, the panels that are connected to the shared Time Range Picker are all updated.<br/>
+<br>Next, I will add a search to the existing dashboard. This search will utilize the productName field from the Enabling Field Lookups section that I previously created. Lastly, I will connect the Top Purchases by Category and VIP Client Purchases panels to the shared Time Range Picker that was configured above. The VIP Client Purchases panel is now connected to the Time range picker input on the dashboard, so when I change the time range on the dashboard, the panels that are connected to the shared Time Range Picker are all updated. The dashboard is now completed.<br/>
 <br><img src="https://imgur.com/h9OPRYZ.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br><img src="https://imgur.com/upgfmbg.png" height="80%" width="80%" alt="Nessus Essentials"/><br/>
 <br />
