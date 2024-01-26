@@ -1,7 +1,7 @@
 <h1>Splunk Cloud in VirtualBox - Mastering Searches, Commands, Reports, and Dashboards</h1>
 
 <h2>Description</h2>
-The core focus for this project is to gain practical experience with Splunk Cloud by setting up a virtual environment in Oracle VM VirtualBox and exploring core functionalities in detail like searches, commands, reports, and dashboards. For this home lab I will use the Search App to add data to my Splunk deployment, search the data with various commands, save the searches as reports, and create dashboards. The searches included in the lab will derive from uploaded indexted data from log files. Commands will be used to create specilaized searches which will provide data that'll be used for the creaation of detailed reports and charts. Lastly, the Dashboard Editor will be used to create a new dashboard which I will add the saved reports, charts, and new search to. 
+The core focus for this project is to gain practical experience with Splunk Cloud by setting up a virtual environment in Oracle VM VirtualBox and exploring core functionalities in detail like searches, commands, reports, and dashboards. For this home lab I will use the Search App to add data to my Splunk deployment, search the data with various commands, save the searches as reports, and create dashboards. The searches included in the lab will derive from uploaded indexted data from log files. Commands will be used to create specialized searches which will provide data that'll be used for the creation of detailed reports and charts. Lastly, the Dashboard Editor will be used to create a new dashboard which I will add the saved reports, charts, and new search to. 
 <br/>
 
 
